@@ -1,0 +1,43 @@
+# Data and Results
+data/*
+!data/.gitkeep
+!data/ode_results/
+data/ode_results/*
+!data/ode_results/.gitkeep
+
+images/*
+!images/.gitkeep
+!images/figuras/
+images/figuras/*
+!images/figuras/.gitkeep
+
+logs/*
+!logs/.gitkeep
+!logs/outputs/
+logs/outputs/*
+!logs/outputs/.gitkeep
+
+ode_results/
+solution_dense.npz
+*.npy
+*.npz
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

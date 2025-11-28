@@ -1,0 +1,2599 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     95967,       2591]
+NotebookOptionsPosition[     89099,       2492]
+NotebookOutlinePosition[     89503,       2508]
+CellTagsIndexPosition[     89460,       2505]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.9729222271396885`*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"216917f4-3a65-b24f-9cad-61b44e30bdf8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"1.", " ", "Load", " ", "Packages"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Quiet", "@", 
+    RowBox[{"<<", "xAct`xTensor`"}]}], "\n", 
+   RowBox[{"Quiet", "@", 
+    RowBox[{"<<", "xAct`xPert`"}]}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9729224192287674`*^9, 3.9729224192287674`*^9}, {
+   3.972922770680826*^9, 3.972922776881197*^9}, 3.972923775243334*^9, 
+   3.9729240570474358`*^9},
+ CellLabel->"In[2]:=",ExpressionUUID->"f40e97d5-2816-804b-967d-4cc33850b23f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279566732216`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"84d15dde-22ef-6f4f-8773-1ea14ecf779f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xPerm`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.2.3\"\>", "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2015", ",", "8", ",", "23"}], "}"}]}],
+  SequenceForm["Package xAct`xPerm`  version ", "1.2.3", ", ", {2015, 8, 23}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279566757755`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"e9cc4523-542f-1040-b767-d8dbd86812ac"],
+
+Cell[BoxData["\<\"CopyRight (C) 2003-2020, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956681776*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"a1456e68-90dc-2c4d-9870-5cb72b3096c2"],
+
+Cell[BoxData["\<\"Connecting to external MinGW executable...\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956751663*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"623c4aa4-d9a6-9647-9ca3-d597661de056"],
+
+Cell[BoxData["\<\"Connection established.\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279568208504`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"0730d4de-d562-704a-bca8-da9413ff55e2"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.97292795682485*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"132a4894-1ace-3e43-b9a2-140ea7760f9a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xTensor`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.2.0\"\>", "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2021", ",", "10", ",", "17"}], "}"}]}],
+  SequenceForm[
+  "Package xAct`xTensor`  version ", "1.2.0", ", ", {2021, 10, 17}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279568266335`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"f9e4f6d8-2dc0-b74f-b59e-d66b45ffa983"],
+
+Cell[BoxData["\<\"CopyRight (C) 2002-2021, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279568287964`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"5addfab9-8a74-0748-b29a-0ac36ab836ad"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956830351*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"b02e50bd-06ad-aa40-a41c-683a85e0a937"],
+
+Cell[BoxData["\<\"These packages come with ABSOLUTELY NO WARRANTY; for \
+details type Disclaimer[]. This is free software, and you are welcome to \
+redistribute it under certain conditions. See the General Public License for \
+details.\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279568319187`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"79f270a7-0fad-ee4e-904c-ee0ea4b09cec"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956833599*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"0b3e9762-b8dd-6240-8745-85af220e0460"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279569597435`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"3b302c23-32c1-8840-8924-494b3f534072"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xPert`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.0.6\"\>", "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2018", ",", "2", ",", "28"}], "}"}]}],
+  SequenceForm["Package xAct`xPert`  version ", "1.0.6", ", ", {2018, 2, 28}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956963255*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"4e3f8b89-0e09-174c-ae4a-d06719828432"],
+
+Cell[BoxData["\<\"CopyRight (C) 2005-2020, David Brizuela, Jose M. \
+Martin-Garcia and Guillermo A. Mena Marugan, under the General Public \
+License.\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279569652557`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"3f17996d-cc6e-bc47-85b2-a52ffd1c248c"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956968254*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"cdc50abc-620f-1c4a-9a2b-cd565baa3d83"],
+
+Cell[BoxData["\<\"These packages come with ABSOLUTELY NO WARRANTY; for \
+details type Disclaimer[]. This is free software, and you are welcome to \
+redistribute it under certain conditions. See the General Public License for \
+details.\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279569692535`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"2f3b6137-151c-bd41-835d-b7dadc49de91"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956970255*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"b4841b6a-cc46-1245-b1f7-96db41715436"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** Variable \"\>", "\[InvisibleSpace]", "$PrePrint", 
+   "\[InvisibleSpace]", "\<\" assigned value \"\>", "\[InvisibleSpace]", 
+   "ScreenDollarIndices"}],
+  SequenceForm[
+  "** Variable ", $PrePrint, " assigned value ", 
+   xAct`xTensor`ScreenDollarIndices],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.972927956972904*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"89f409f6-c3d8-9d4b-abe6-10224b7c2de4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** Variable \"\>", "\[InvisibleSpace]", "$CovDFormat", 
+   "\[InvisibleSpace]", "\<\" changed from \"\>", 
+   "\[InvisibleSpace]", "\<\"Prefix\"\>", "\[InvisibleSpace]", "\<\" to \"\>",
+    "\[InvisibleSpace]", "\<\"Postfix\"\>"}],
+  SequenceForm[
+  "** Variable ", xAct`xTensor`$CovDFormat, " changed from ", "Prefix", 
+   " to ", "Postfix"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279569739113`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"922214eb-cd28-834e-a480-34574dbce28e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** Option \"\>", "\[InvisibleSpace]", "AllowUpperDerivatives", 
+   "\[InvisibleSpace]", "\<\" of \"\>", "\[InvisibleSpace]", "ContractMetric",
+    "\[InvisibleSpace]", "\<\" changed from \"\>", "\[InvisibleSpace]", 
+   "False", "\[InvisibleSpace]", "\<\" to \"\>", "\[InvisibleSpace]", "True"}],
+  SequenceForm[
+  "** Option ", xAct`xTensor`AllowUpperDerivatives, " of ", 
+   xAct`xTensor`ContractMetric, " changed from ", False, " to ", True],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.97292795697591*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"f365f357-32c0-ae41-ad7f-8dc59edd1c52"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** Option \"\>", "\[InvisibleSpace]", "MetricOn", 
+   "\[InvisibleSpace]", "\<\" of \"\>", "\[InvisibleSpace]", "MakeRule", 
+   "\[InvisibleSpace]", "\<\" changed from \"\>", "\[InvisibleSpace]", "None",
+    "\[InvisibleSpace]", "\<\" to \"\>", "\[InvisibleSpace]", "All"}],
+  SequenceForm[
+  "** Option ", xAct`xTensor`MetricOn, " of ", xAct`xTensor`MakeRule, 
+   " changed from ", None, " to ", All],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279569769135`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"12c96ebf-1e86-5d43-adb8-c94a7c554835"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** Option \"\>", "\[InvisibleSpace]", "ContractMetrics", 
+   "\[InvisibleSpace]", "\<\" of \"\>", "\[InvisibleSpace]", "MakeRule", 
+   "\[InvisibleSpace]", "\<\" changed from \"\>", "\[InvisibleSpace]", 
+   "False", "\[InvisibleSpace]", "\<\" to \"\>", "\[InvisibleSpace]", "True"}],
+  SequenceForm[
+  "** Option ", xAct`xTensor`ContractMetrics, " of ", xAct`xTensor`MakeRule, 
+   " changed from ", False, " to ", True],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972922429805151*^9, {3.9729227693493958`*^9, 3.9729227774785614`*^9}, 
+   3.9729228512839565`*^9, 3.972923642272934*^9, {3.97292375775638*^9, 
+   3.9729237780158043`*^9}, 3.972924061384508*^9, 3.972924325677046*^9, 
+   3.9729243731775837`*^9, 3.972924520958391*^9, 3.972924568153511*^9, 
+   3.9729277003032436`*^9, 3.9729279569789104`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"7cfdf37b-75d1-864a-8c31-aff313e00976"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"2.", " ", "Define", " ", "Manifold", " ", "and", " ", "Metric"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Quiet", "@", 
+     RowBox[{"DefManifold", "[", 
+      RowBox[{"M", ",", "4", ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f"}], 
+        "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Quiet", "@", 
+     RowBox[{"DefMetric", "[", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", 
+       RowBox[{"g", "[", 
+        RowBox[{
+         RowBox[{"-", "a"}], ",", 
+         RowBox[{"-", "b"}]}], "]"}], ",", "CD", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<;\>\"", ",", "\"\<D\>\""}], "}"}], ",", 
+       RowBox[{"PrintAs", "->", "\"\<g\>\""}]}], "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.972922431394945*^9, 3.972922431394945*^9}, {
+   3.972922783987648*^9, 3.972922785249159*^9}, 3.9729236483631134`*^9, 
+   3.9729237643867607`*^9, {3.972924069513487*^9, 3.9729240785212097`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"85b893d6-4991-a844-b0a5-b120e0999817"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefManifold", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"manifold \"\>", "\[InvisibleSpace]", "M", 
+   "\[InvisibleSpace]", "\<\". \"\>", "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefManifold, ": Defining ", "manifold ", $CellContext`M,
+    ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279570146046`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"3da51a31-bbff-e44f-ada3-71c5a72b30cb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefVBundle", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"vbundle \"\>", "\[InvisibleSpace]", "TangentM", 
+   "\[InvisibleSpace]", "\<\". \"\>", "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefVBundle, ": Defining ", 
+   "vbundle ", $CellContext`TangentM, ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957016691*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"d912d813-1fd0-0a49-a722-6f79527666f3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric metric tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"g", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric metric tensor ", 
+   $CellContext`g[-$CellContext`a, -$CellContext`b], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957024597*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"4768b0b7-5a2b-ef43-8ced-579f94b32bc1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"antisymmetric tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"epsilong", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}], ",", 
+     RowBox[{"-", "d"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "antisymmetric tensor ", 
+   $CellContext`epsilong[-$CellContext`a, -$CellContext`b, -$CellContext`c, \
+-$CellContext`d], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279570261536`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"5a887c32-631f-e744-940c-e8bbc8ff8f2e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"tetrametric \"\>", "\[InvisibleSpace]", 
+   RowBox[{"Tetrag", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}], ",", 
+     RowBox[{"-", "d"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "tetrametric ", 
+   $CellContext`Tetrag[-$CellContext`a, -$CellContext`b, -$CellContext`c, \
+-$CellContext`d], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957028303*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"47cbd160-5831-0348-8473-452beae9be29"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"tetrametric \"\>", "\[InvisibleSpace]", 
+   RowBox[{"Tetrag\[Dagger]", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}], ",", 
+     RowBox[{"-", "d"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "tetrametric ", 
+   $CellContext`Tetrag\[Dagger][-$CellContext`a, -$CellContext`b, \
+-$CellContext`c, -$CellContext`d], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957029852*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"1eace0bd-598e-3143-8fe6-8d82dd37a8f5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefCovD", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"covariant derivative \"\>", "\[InvisibleSpace]", 
+   RowBox[{"CD", "[", 
+    RowBox[{"-", "a"}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefCovD, ": Defining ", "covariant derivative ", 
+   $CellContext`CD[-$CellContext`a], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279570314007`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"ef41846c-00f1-6646-baca-8704d721d3cd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"vanishing torsion tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"TorsionCD", "[", 
+    RowBox[{"a", ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "vanishing torsion tensor ", 
+   $CellContext`TorsionCD[$CellContext`a, -$CellContext`b, -$CellContext`c], 
+   ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957032444*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"5372c93f-94cd-bb4e-b64b-927f0fb0ebdf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric Christoffel tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"ChristoffelCD", "[", 
+    RowBox[{"a", ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", 
+   "symmetric Christoffel tensor ", 
+   $CellContext`ChristoffelCD[$CellContext`a, -$CellContext`b, \
+-$CellContext`c], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957034603*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"1f3824bc-e085-a64e-9c5f-ac75c4749477"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Riemann tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"RiemannCD", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}], ",", 
+     RowBox[{"-", "d"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "Riemann tensor ", 
+   $CellContext`RiemannCD[-$CellContext`a, -$CellContext`b, -$CellContext`c, \
+-$CellContext`d], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279570366077`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"2f51fac0-43b4-9448-a15e-4e306a994604"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric Ricci tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"RicciCD", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric Ricci tensor ", 
+   $CellContext`RicciCD[-$CellContext`a, -$CellContext`b], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279570386086`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"04a9b450-9d47-0548-a389-a656e8fe24f0"],
+
+Cell[BoxData["\<\"** DefCovD:  Contractions of Riemann automatically replaced \
+by Ricci.\"\>"], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.97292795703961*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"21b75326-f696-4640-b995-c3d8dbcfdbd2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Ricci scalar \"\>", "\[InvisibleSpace]", 
+   RowBox[{"RicciScalarCD", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "Ricci scalar ", 
+   $CellContext`RicciScalarCD[], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957041609*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"d9260eea-bd40-f14a-8f76-7c8bc82bcfac"],
+
+Cell[BoxData["\<\"** DefCovD:  Contractions of Ricci automatically replaced \
+by RicciScalar.\"\>"], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279570426083`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"cc47eb1c-e0e9-604f-b30c-80f32609b4e0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric Einstein tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"EinsteinCD", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric Einstein tensor ", 
+   $CellContext`EinsteinCD[-$CellContext`a, -$CellContext`b], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957044117*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"6e66f8e3-be8a-414d-a01d-5d8a60880ca4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Weyl tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"WeylCD", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}], ",", 
+     RowBox[{"-", "c"}], ",", 
+     RowBox[{"-", "d"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "Weyl tensor ", 
+   $CellContext`WeylCD[-$CellContext`a, -$CellContext`b, -$CellContext`c, \
+-$CellContext`d], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957091755*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"4d528af9-7bd1-9443-a277-8d0fbdced748"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric TFRicci tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"TFRicciCD", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric TFRicci tensor ", 
+   $CellContext`TFRicciCD[-$CellContext`a, -$CellContext`b], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279571208496`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"ca629581-0abb-7140-bd94-462d54f96187"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Kretschmann scalar \"\>", "\[InvisibleSpace]", 
+   RowBox[{"KretschmannCD", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "Kretschmann scalar ", 
+   $CellContext`KretschmannCD[], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279571489334`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"02d40cd1-be28-964c-95d9-499eaae0c6e6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** DefCovD:  Computing RiemannToWeylRules for dim \"\>", "\[InvisibleSpace]",
+    "4"}],
+  SequenceForm["** DefCovD:  Computing RiemannToWeylRules for dim ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279571519337`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"229ed846-b0dd-8449-983b-451631d8da9d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** DefCovD:  Computing RicciToTFRicci for dim \"\>", "\[InvisibleSpace]",
+    "4"}],
+  SequenceForm["** DefCovD:  Computing RicciToTFRicci for dim ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957214432*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"ead6fca0-32c5-3f4f-b694-6f7db7397412"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** DefCovD:  Computing RicciToEinsteinRules for dim \"\>", "\[InvisibleSpace]",
+    "4"}],
+  SequenceForm["** DefCovD:  Computing RicciToEinsteinRules for dim ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.9729279573011436`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"e142d6cd-aaf3-7643-8ddc-d684cdc3ace0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"weight +2 density \"\>", "\[InvisibleSpace]", 
+   RowBox[{"Detg", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"Determinant.\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "weight +2 density ", 
+   $CellContext`Detg[], ". ", "Determinant."],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924381366131*^9, 3.972927703973856*^9, 
+  3.972927957330246*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[4]:=",ExpressionUUID->"ea07e036-5a83-2e41-8276-0133784a662a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"3.", " ", "Define", " ", "Fields"}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"We", " ", "define", " ", 
+    RowBox[{"h", "[", "]"}], " ", "as", " ", "a", " ", "tensor", " ", "on", " ",
+     "M"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"DefTensor", "[", 
+    RowBox[{
+     RowBox[{"h", "[", "]"}], ",", "M"}], "]"}], "\n", 
+   RowBox[{"DefConstant", "[", "MP", "]"}], "\n", 
+   RowBox[{"DefConstant", "[", "xi", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.972922442071579*^9, 3.972922442071579*^9}, 
+   3.9729237844220695`*^9},
+ CellLabel->"In[6]:=",ExpressionUUID->"7a66de43-6689-564c-aa30-753d529b5afb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"h", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "tensor ", 
+   $CellContext`h[], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972924383744631*^9, 3.972927706223749*^9, 
+  3.972927957336317*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[6]:=",ExpressionUUID->"45dfbcb8-ec93-2a4e-b59d-33e2d71d8c4c"],
+
+Cell[BoxData[
+ RowBox[{"DefConstant", "[", "MP", "]"}]], "Output",
+ CellChangeTimes->{3.972922443158125*^9, 3.97292279051338*^9, 
+  3.9729228560062847`*^9, 3.9729236562275944`*^9, 3.972923788616108*^9, 
+  3.972924084772936*^9, 3.972924331293827*^9, 3.9729243837481365`*^9, 
+  3.9729277062257576`*^9, 3.972927957367239*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"2c5b9561-3478-9148-ba2a-484dfb61d5ad"],
+
+Cell[BoxData[
+ RowBox[{"DefConstant", "[", "xi", "]"}]], "Output",
+ CellChangeTimes->{3.972922443158125*^9, 3.97292279051338*^9, 
+  3.9729228560062847`*^9, 3.9729236562275944`*^9, 3.972923788616108*^9, 
+  3.972924084772936*^9, 3.972924331293827*^9, 3.9729243837481365`*^9, 
+  3.9729277062257576`*^9, 3.972927957370369*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"57ce9e0a-e756-9448-bb12-eb38ee44284d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"4.", " ", "Define", " ", "Perturbations"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"DefMetricPerturbation", "[", 
+    RowBox[{"g", ",", "gamma", ",", "eps"}], "]"}], "\n", 
+   RowBox[{"DefTensorPerturbation", "[", 
+    RowBox[{"dh", ",", 
+     RowBox[{"h", "[", "]"}], ",", "eps"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.972922451146286*^9, 3.972922451146286*^9}, 
+   3.9729237947030087`*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"9fe8f223-70ad-8544-bb02-6ee36054a56b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefParameter", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"parameter \"\>", "\[InvisibleSpace]", "eps", 
+   "\[InvisibleSpace]", "\<\". \"\>", "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefParameter, ": Defining ", 
+   "parameter ", $CellContext`eps, ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972927708780449*^9, 3.9729279574017735`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[9]:=",ExpressionUUID->"ff1b0ae8-afad-6f44-850e-d7ca0db7e4e4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"gamma", "[", 
+    RowBox[{
+     RowBox[{"LI", "[", "\<\"order\"\>", "]"}], ",", 
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "tensor ", 
+   $CellContext`gamma[
+    xAct`xTensor`LI["order"], -$CellContext`a, -$CellContext`b], ". ", ""],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.972927708780449*^9, 3.9729279574040756`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[9]:=",ExpressionUUID->"79afbc28-208e-1244-8b9f-04294914ad63"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"DefTensorPerturbation", "[", 
+  RowBox[{"dh", ",", 
+   InterpretationBox[
+    StyleBox["h",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`h[],
+    Editable->False], ",", 
+   InterpretationBox[
+    StyleBox["eps",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`eps,
+    Editable->False]}], "]"}]], "Output",
+ CellChangeTimes->{3.9729224523030167`*^9, 3.97292279433889*^9, 
+  3.9729228580570316`*^9, 3.972923662372717*^9, 3.972923795943817*^9, 
+  3.972924087547575*^9, 3.9729243858950825`*^9, 3.9729274349608116`*^9, 
+  3.9729277087889557`*^9, 3.9729279574114056`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"4f57da57-9ab3-d948-8bb6-048802d3ab98"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"5.", " ", "Define", " ", "Lagrangian", " ", 
+    RowBox[{"(", 
+     RowBox[{"DIRECT", " ", "METHOD"}], ")"}]}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "We", " ", "put", " ", "the", " ", "equation", " ", "directly", " ", 
+    "inside", " ", "Expand", " ", "to", " ", "ensure", " ", "xAct", " ", 
+    "sees", " ", "the", " ", "tensors"}], "*)"}], 
+  RowBox[{
+   RowBox[{"L", "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"-", 
+        RowBox[{"Detg", "[", "]"}]}], "]"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"MP", "^", "2"}], "+", 
+            RowBox[{"xi", "*", 
+             RowBox[{
+              RowBox[{"h", "[", "]"}], "^", "2"}]}]}], ")"}], "/", "2"}], "*", 
+         RowBox[{"RicciScalarCD", "[", "]"}]}], "-", 
+        RowBox[{
+         RowBox[{"1", "/", "2"}], "*", 
+         RowBox[{
+          RowBox[{"CD", "[", 
+           RowBox[{"-", "a"}], "]"}], "[", 
+          RowBox[{"h", "[", "]"}], "]"}], "*", 
+         RowBox[{
+          RowBox[{"CD", "[", "a", "]"}], "[", 
+          RowBox[{"h", "[", "]"}], "]"}]}]}], ")"}]}], "]"}]}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.9729224602047863`*^9, 3.9729224654311275`*^9}, 
+   3.972922805089155*^9, {3.972923992142929*^9, 3.9729240112010593`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"cb5333af-4677-5249-8344-33465e72d6fb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"6.", " ", "Perturb", " ", "and", " ", "EXPAND", " ", 
+    RowBox[{"(", 
+     RowBox[{"The", " ", "Missing", " ", "Step"}], ")"}]}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"First", ",", 
+    RowBox[{"compute", " ", "the", " ", "abstract", " ", "perturbation"}]}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SecondVarAbstract", "=", 
+    RowBox[{"Perturbation", "[", 
+     RowBox[{"L", ",", "2"}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"CRITICAL", " ", 
+     RowBox[{"STEP", ":", 
+      RowBox[{"Convert", " ", "abstract", " ", 
+       RowBox[{"Delta", "[", "g", "]"}], " ", 
+       RowBox[{"into", "'"}], 
+       RowBox[{"gamma", "'"}], " ", "and", " ", "expand", " ", 
+       RowBox[{"Delta", "[", "R", "]"}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SecondVarExpanded", "=", 
+     RowBox[{"ExpandPerturbation", "[", "SecondVarAbstract", "]"}]}], ";"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Define", " ", "the", " ", "Quadratic", " ", "Lagrangian"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"QuadraticL", "=", 
+     RowBox[{
+      RowBox[{"1", "/", "2"}], "*", "SecondVarExpanded"}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.97292247713834*^9, 3.97292247713834*^9}, {
+   3.9729228140498714`*^9, 3.9729228208062*^9}, {3.9729236275706654`*^9, 
+   3.9729236280140266`*^9}, {3.972923738683422*^9, 3.972923743107504*^9}, {
+   3.9729238160671787`*^9, 3.9729238184710464`*^9}, 3.97292400427223*^9, {
+   3.97292430559441*^9, 3.972924316680372*^9}, {3.972924393139059*^9, 
+   3.972924424378559*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"8c3c4e31-b58d-c046-adc7-f9ada4f78d42"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4", " ", "MP", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", "MP", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[$CellContext`MP],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{"R", "[", "D", "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`RicciScalarCD[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`RicciScalarCD[]],
+       Editable->False]}], "-", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["MP", "2"], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            RowBox[{"R", "[", "D", "]"}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`RicciScalarCD[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`RicciScalarCD[]],
+        Editable->False]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "+", 
+     RowBox[{
+      SuperscriptBox["MP", "2"], " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{"R", "[", "D", "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`RicciScalarCD[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`RicciScalarCD[], 2],
+       Editable->False]}], "-", 
+     FractionBox[
+      RowBox[{"2", " ", "MP", " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", "MP", "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[$CellContext`MP],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"R", "[", "D", "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`RicciScalarCD[],
+        Editable->False]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "+", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"R", "[", "D", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`RicciScalarCD[],
+       Editable->False], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", "MP", " ", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{
+            SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", "MP", "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          xAct`xPert`Perturbation[$CellContext`MP, 2],
+          Editable->False]}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             StyleBox["(",
+              FontColor->RGBColor[1, 0, 0]], 
+             InterpretationBox[
+              StyleBox[
+               RowBox[{"\[EmptyUpTriangle]", "[", "MP", "]"}],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              xAct`xPert`Perturbation[$CellContext`MP],
+              Editable->False], 
+             StyleBox[")",
+              FontColor->RGBColor[1, 0, 0]]}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xTensor`Scalar[
+            xAct`xPert`Perturbation[$CellContext`MP]],
+           Editable->False], "2"]}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["MP", "2"], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"R", "[", "D", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`RicciScalarCD[],
+       Editable->False], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False], "]"}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xPert`Perturbation[
+            $CellContext`Detg[], 2],
+           Editable->False], 
+          RowBox[{"2", " ", 
+           SqrtBox[
+            RowBox[{"-", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False]}]]}]]}], "-", 
+        FractionBox[
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             StyleBox["(",
+              FontColor->RGBColor[1, 0, 0]], 
+             InterpretationBox[
+              StyleBox[
+               RowBox[{"\[EmptyUpTriangle]", "[", 
+                InterpretationBox[
+                 StyleBox[
+                  OverscriptBox["g", 
+                   OverscriptBox[
+                    StyleBox["~",
+                    FontColor->RGBColor[0, 0, 0]], 
+                    StyleBox["~",
+                    FontColor->RGBColor[0, 0, 0]]]],
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`Detg[],
+                 Editable->False], "]"}],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              xAct`xPert`Perturbation[
+               $CellContext`Detg[]],
+              Editable->False], 
+             StyleBox[")",
+              FontColor->RGBColor[1, 0, 0]]}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xTensor`Scalar[
+            xAct`xPert`Perturbation[
+             $CellContext`Detg[]]],
+           Editable->False], "2"], 
+         RowBox[{"4", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False]}], ")"}], 
+           RowBox[{"3", "/", "2"}]]}]]}], ")"}]}]}], ")"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      SuperscriptBox[
+       InterpretationBox[
+        StyleBox["h",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`h[],
+        Editable->False], "2"], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", "xi", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[$CellContext`xi],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{"R", "[", "D", "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`RicciScalarCD[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`RicciScalarCD[]],
+       Editable->False]}], "-", 
+     FractionBox[
+      RowBox[{"xi", " ", 
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["h",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`h[],
+         Editable->False], "2"], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            RowBox[{"R", "[", "D", "]"}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`RicciScalarCD[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`RicciScalarCD[]],
+        Editable->False]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "+", 
+     RowBox[{"4", " ", "xi", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox["h",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`h[],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", 
+         InterpretationBox[
+          StyleBox["h",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`h[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`h[]],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{"R", "[", "D", "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`RicciScalarCD[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`RicciScalarCD[]],
+       Editable->False]}], "+", 
+     RowBox[{"xi", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      SuperscriptBox[
+       InterpretationBox[
+        StyleBox["h",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`h[],
+        Editable->False], "2"], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{"R", "[", "D", "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`RicciScalarCD[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`RicciScalarCD[], 2],
+       Editable->False]}], "-", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["h",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`h[],
+         Editable->False], "2"], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", "xi", "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[$CellContext`xi],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"R", "[", "D", "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`RicciScalarCD[],
+        Editable->False]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "+", 
+     RowBox[{"4", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox["h",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`h[],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", "xi", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[$CellContext`xi],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", 
+         InterpretationBox[
+          StyleBox["h",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`h[],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`h[]],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"R", "[", "D", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`RicciScalarCD[],
+       Editable->False]}], "-", 
+     FractionBox[
+      RowBox[{"2", " ", "xi", " ", 
+       InterpretationBox[
+        StyleBox["h",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`h[],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox["h",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`h[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`h[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"R", "[", "D", "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`RicciScalarCD[],
+        Editable->False]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "+", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      SuperscriptBox[
+       InterpretationBox[
+        StyleBox["h",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`h[],
+        Editable->False], "2"], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", "xi", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[$CellContext`xi, 2],
+       Editable->False], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"R", "[", "D", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`RicciScalarCD[],
+       Editable->False]}], "+", 
+     RowBox[{"xi", " ", 
+      SuperscriptBox[
+       InterpretationBox[
+        StyleBox["h",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`h[],
+        Editable->False], "2"], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"R", "[", "D", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`RicciScalarCD[],
+       Editable->False], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False], "]"}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xPert`Perturbation[
+            $CellContext`Detg[], 2],
+           Editable->False], 
+          RowBox[{"2", " ", 
+           SqrtBox[
+            RowBox[{"-", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False]}]]}]]}], "-", 
+        FractionBox[
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             StyleBox["(",
+              FontColor->RGBColor[1, 0, 0]], 
+             InterpretationBox[
+              StyleBox[
+               RowBox[{"\[EmptyUpTriangle]", "[", 
+                InterpretationBox[
+                 StyleBox[
+                  OverscriptBox["g", 
+                   OverscriptBox[
+                    StyleBox["~",
+                    FontColor->RGBColor[0, 0, 0]], 
+                    StyleBox["~",
+                    FontColor->RGBColor[0, 0, 0]]]],
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`Detg[],
+                 Editable->False], "]"}],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              xAct`xPert`Perturbation[
+               $CellContext`Detg[]],
+              Editable->False], 
+             StyleBox[")",
+              FontColor->RGBColor[1, 0, 0]]}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xTensor`Scalar[
+            xAct`xPert`Perturbation[
+             $CellContext`Detg[]]],
+           Editable->False], "2"], 
+         RowBox[{"4", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False]}], ")"}], 
+           RowBox[{"3", "/", "2"}]]}]]}], ")"}]}], "+", 
+     RowBox[{"xi", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"R", "[", "D", "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`RicciScalarCD[],
+       Editable->False], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["h",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`h[],
+          Editable->False], " ", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{
+            SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+            InterpretationBox[
+             StyleBox["h",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`h[],
+             Editable->False], "]"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          xAct`xPert`Perturbation[
+           $CellContext`h[], 2],
+          Editable->False]}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             StyleBox["(",
+              FontColor->RGBColor[1, 0, 0]], 
+             InterpretationBox[
+              StyleBox[
+               RowBox[{"\[EmptyUpTriangle]", "[", 
+                InterpretationBox[
+                 StyleBox["h",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`h[],
+                 Editable->False], "]"}],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              xAct`xPert`Perturbation[
+               $CellContext`h[]],
+              Editable->False], 
+             StyleBox[")",
+              FontColor->RGBColor[1, 0, 0]]}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xTensor`Scalar[
+            xAct`xPert`Perturbation[
+             $CellContext`h[]]],
+           Editable->False], "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             SuperscriptBox["D", "a"], "h"}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`CD[$CellContext`a][
+            $CellContext`h[]],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`CD[$CellContext`a][
+          $CellContext`h[]]],
+        Editable->False], " ", 
+       RowBox[{"(", 
+        InterpretationBox[
+         StyleBox[
+          RowBox[{
+           SubscriptBox["D", "a"], "h"}],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`CD[-$CellContext`a][
+          $CellContext`h[]],
+         Editable->False], ")"}]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "-", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{
+         SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{
+            SuperscriptBox["D", "a"], "h"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`CD[$CellContext`a][
+           $CellContext`h[]],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`CD[$CellContext`a][
+         $CellContext`h[]], 2],
+       Editable->False], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{
+          SubscriptBox["D", "a"], "h"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`CD[-$CellContext`a][
+         $CellContext`h[]],
+        Editable->False], ")"}]}], "-", 
+     RowBox[{"2", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      InterpretationBox[
+       StyleBox[
+        RowBox[{"\[EmptyUpTriangle]", "[", 
+         InterpretationBox[
+          StyleBox[
+           RowBox[{
+            SuperscriptBox["D", "a"], "h"}],
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`CD[$CellContext`a][
+           $CellContext`h[]],
+          Editable->False], "]"}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       xAct`xPert`Perturbation[
+        $CellContext`CD[$CellContext`a][
+         $CellContext`h[]]],
+       Editable->False], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{
+          SubscriptBox["D", "a"], "\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox["h",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`h[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`CD[-$CellContext`a][
+         xAct`xPert`Perturbation[
+          $CellContext`h[]]],
+        Editable->False], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False], "]"}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xPert`Perturbation[
+            $CellContext`Detg[], 2],
+           Editable->False], 
+          RowBox[{"2", " ", 
+           SqrtBox[
+            RowBox[{"-", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False]}]]}]]}], "-", 
+        FractionBox[
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox[
+            RowBox[{
+             StyleBox["(",
+              FontColor->RGBColor[1, 0, 0]], 
+             InterpretationBox[
+              StyleBox[
+               RowBox[{"\[EmptyUpTriangle]", "[", 
+                InterpretationBox[
+                 StyleBox[
+                  OverscriptBox["g", 
+                   OverscriptBox[
+                    StyleBox["~",
+                    FontColor->RGBColor[0, 0, 0]], 
+                    StyleBox["~",
+                    FontColor->RGBColor[0, 0, 0]]]],
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`Detg[],
+                 Editable->False], "]"}],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              xAct`xPert`Perturbation[
+               $CellContext`Detg[]],
+              Editable->False], 
+             StyleBox[")",
+              FontColor->RGBColor[1, 0, 0]]}],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           xAct`xTensor`Scalar[
+            xAct`xPert`Perturbation[
+             $CellContext`Detg[]]],
+           Editable->False], "2"], 
+         RowBox[{"4", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", 
+             InterpretationBox[
+              StyleBox[
+               OverscriptBox["g", 
+                OverscriptBox[
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]], 
+                 StyleBox["~",
+                  FontColor->RGBColor[0, 0, 0]]]],
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Detg[],
+              Editable->False]}], ")"}], 
+           RowBox[{"3", "/", "2"}]]}]]}], ")"}], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{
+          SubscriptBox["D", "a"], "h"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`CD[-$CellContext`a][
+         $CellContext`h[]],
+        Editable->False], ")"}], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{
+          SuperscriptBox["D", "a"], "h"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`CD[$CellContext`a][
+         $CellContext`h[]],
+        Editable->False], ")"}]}], "+", 
+     FractionBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox[
+         RowBox[{"\[EmptyUpTriangle]", "[", 
+          InterpretationBox[
+           StyleBox[
+            OverscriptBox["g", 
+             OverscriptBox[
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]], 
+              StyleBox["~",
+               FontColor->RGBColor[0, 0, 0]]]],
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Detg[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        xAct`xPert`Perturbation[
+         $CellContext`Detg[]],
+        Editable->False], " ", 
+       RowBox[{"(", 
+        InterpretationBox[
+         StyleBox[
+          RowBox[{
+           SubscriptBox["D", "a"], "\[EmptyUpTriangle]", "[", 
+           InterpretationBox[
+            StyleBox["h",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`h[],
+            Editable->False], "]"}],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`CD[-$CellContext`a][
+          xAct`xPert`Perturbation[
+           $CellContext`h[]]],
+         Editable->False], ")"}], " ", 
+       RowBox[{"(", 
+        InterpretationBox[
+         StyleBox[
+          RowBox[{
+           SuperscriptBox["D", "a"], "h"}],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`CD[$CellContext`a][
+          $CellContext`h[]],
+         Editable->False], ")"}]}], 
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]]], "-", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"-", 
+        InterpretationBox[
+         StyleBox[
+          OverscriptBox["g", 
+           OverscriptBox[
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]], 
+            StyleBox["~",
+             FontColor->RGBColor[0, 0, 0]]]],
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Detg[],
+         Editable->False]}]], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{
+          SubscriptBox["D", "a"], 
+          SuperscriptBox["\[EmptyUpTriangle]", "2"], "[", 
+          InterpretationBox[
+           StyleBox["h",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`h[],
+           Editable->False], "]"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`CD[-$CellContext`a][
+         xAct`xPert`Perturbation[
+          $CellContext`h[], 2]],
+        Editable->False], ")"}], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        StyleBox[
+         RowBox[{
+          SuperscriptBox["D", "a"], "h"}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`CD[$CellContext`a][
+         $CellContext`h[]],
+        Editable->False], ")"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{{3.972924393587572*^9, 3.972924424987564*^9}, 
+   3.9729274426513367`*^9, 3.9729277135571423`*^9, 3.972927957482092*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"fb1b0f75-d7c8-8043-9b43-758069582dfe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Rule", " ", 
+    RowBox[{"A", ":", 
+     RowBox[{
+     "Define", " ", "what", " ", "the", " ", "perturbations", " ", 
+      "are"}]}]}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"PerturbationRules", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Perturbation", "[", 
+         RowBox[{"MP", ",", "_"}], "]"}], "->", "0"}], ",", 
+       RowBox[{
+        RowBox[{"Perturbation", "[", 
+         RowBox[{"xi", ",", "_"}], "]"}], "->", "0"}], ",", 
+       RowBox[{
+        RowBox[{"Perturbation", "[", 
+         RowBox[{
+          RowBox[{"h", "[", "]"}], ",", "_"}], "]"}], "->", "dh"}], ",", 
+       RowBox[{
+        RowBox[{"Perturbation", "[", 
+         RowBox[{
+          RowBox[{"g", "[", 
+           RowBox[{
+            RowBox[{"-", "a_"}], ",", 
+            RowBox[{"-", "b_"}]}], "]"}], ",", "_"}], "]"}], "->", 
+        RowBox[{"gamma", "[", 
+         RowBox[{
+          RowBox[{"-", "a"}], ",", 
+          RowBox[{"-", "b"}]}], "]"}]}]}], "}"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Rule", " ", 
+     RowBox[{"B", ":", 
+      RowBox[{"Define", " ", "the", " ", "Flat", " ", "Space", " ", "Limit", " ", 
+       RowBox[{"(", 
+        RowBox[{"Crucial", "!"}], ")"}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"FlatSpaceRules", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"RicciScalarCD", "[", "]"}], "->", "0"}], ",", 
+      RowBox[{
+       RowBox[{"R", "[", "___", "]"}], "->", "0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"CD", "[", "a_", "]"}], "[", 
+        RowBox[{"h", "[", "]"}], "]"}], "->", "0"}]}], "}"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9729228292711163`*^9, 3.972922833076582*^9}, {
+   3.972922925070343*^9, 3.9729229287083817`*^9}, 3.9729241023735714`*^9, {
+   3.972924136564625*^9, 3.972924158172306*^9}, {3.9729244413167725`*^9, 
+   3.9729244438767014`*^9}, {3.972927568216057*^9, 3.9729275897192173`*^9}, {
+   3.972927944105772*^9, 3.9729279623674183`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"d65f8371-ca46-5f42-b9ac-a1f0e8a46ca0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     StyleBox[
+      RowBox[{"R", "[", "D", "]"}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RicciScalarCD[],
+     Editable->False], "\[Rule]", "0"}], ",", 
+   RowBox[{
+    RowBox[{"R", "[", "___", "]"}], "\[Rule]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[
+      RowBox[{
+       SuperscriptBox["D", 
+        UnderscriptBox["a", "_"]], "h"}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`CD[
+      Pattern[$CellContext`a, 
+       Blank[]]][
+      $CellContext`h[]],
+     Editable->False], "\[Rule]", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.972927962755066*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"9e3ba120-f7b7-d44f-a7fd-4034af63ad96"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "8.", " ", "Apply", " ", "Rules", " ", "and", " ", "Clean", " ", "Up"}], 
+   "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "We", " ", "run", " ", "ExpandPerturbation", " ", "one", " ", "last", " ", 
+    "time", " ", "to", " ", "ensure", " ", "any", " ", "lingering", " ", 
+    RowBox[{"Delta", "[", "R", "]"}], " ", "turns", " ", "into", " ", 
+    "gamma"}], "*)"}], 
+  RowBox[{
+   RowBox[{"CleanQuadraticL", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"ExpandPerturbation", "[", "QuadraticL", "]"}], "/.", " ", 
+        "PerturbationRules"}], "/.", " ", "FlatSpaceRules"}], "//", 
+      "ToCanonical"}], "//", "Simplify"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.9729229343190536`*^9, 3.9729229343190536`*^9}, {
+  3.972924171255993*^9, 3.9729241766611137`*^9}, {3.972927681446823*^9, 
+  3.9729276818818626`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"bb1b3390-b9bd-de44-8053-4c23ca731d1e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToCanonical", "noident", 
+   "\"Unknown expression not canonicalized: \\!\\(\\*RowBox[{\\\"xi\\\"}]\\) \
+.\"", 2, 17, 1, 24854190752690781237, "Local", "xAct`xTensor`ToCanonical"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.972922935052717*^9, 3.972923671254101*^9, 
+  3.9729241776428623`*^9, 3.972927683869505*^9, 3.972927719043894*^9, 
+  3.972927957675802*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[17]:=",ExpressionUUID->"5a64eae6-32ae-274f-a21e-33284597fd8d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToCanonical", "noident", 
+   "\"Unknown expression not canonicalized: \\!\\(\\*RowBox[{\\\"xi\\\"}]\\) \
+.\"", 2, 17, 2, 24854190752690781237, "Local", "xAct`xTensor`ToCanonical"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.972922935052717*^9, 3.972923671254101*^9, 
+  3.9729241776428623`*^9, 3.972927683869505*^9, 3.972927719043894*^9, 
+  3.972927957681801*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[17]:=",ExpressionUUID->"099cf84c-7b44-b740-86c8-ffda2464b481"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToCanonical", "noident", 
+   "\"Unknown expression not canonicalized: \\!\\(\\*RowBox[{\\\"MP\\\"}]\\) \
+.\"", 2, 17, 3, 24854190752690781237, "Local", "xAct`xTensor`ToCanonical"},
+  "MessageTemplate2",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.972922935052717*^9, 3.972923671254101*^9, 
+  3.9729241776428623`*^9, 3.972927683869505*^9, 3.972927719043894*^9, 
+  3.9729279576858177`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[17]:=",ExpressionUUID->"2159e285-0ae8-214a-81c0-d65f0c391bca"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ToCanonical\\\", \\\"::\
+\\\", \\\"noident\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"", 2, 17, 4, 24854190752690781237, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.972922935052717*^9, 3.972923671254101*^9, 
+  3.9729241776428623`*^9, 3.972927683869505*^9, 3.972927719043894*^9, 
+  3.9729279576903896`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[17]:=",ExpressionUUID->"2afe5550-0f6e-4847-ae28-73ab768c2e34"]
+}, Open  ]],
+
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{3.9729236724033737`*^9},
+ CellLabel->"In[18]:=",ExpressionUUID->"c6f4b4b0-5b3d-f246-bea1-e9badaec6e85"]
+},
+WindowSize->{1440, 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+FrontEndVersion->"14.2 para Microsoft Windows (64-bit) (March 14, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"224f6066-99ac-334a-9dff-495176462ae4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 148, 2, 28, "Input",ExpressionUUID->"216917f4-3a65-b24f-9cad-61b44e30bdf8"],
+Cell[CellGroupData[{
+Cell[727, 26, 538, 13, 117, "Input",ExpressionUUID->"f40e97d5-2816-804b-967d-4cc33850b23f"],
+Cell[CellGroupData[{
+Cell[1290, 43, 576, 10, 22, "Print",ExpressionUUID->"84d15dde-22ef-6f4f-8773-1ea14ecf779f"],
+Cell[1869, 55, 841, 16, 22, "Print",ExpressionUUID->"e9cc4523-542f-1040-b767-d8dbd86812ac"],
+Cell[2713, 73, 595, 10, 22, "Print",ExpressionUUID->"a1456e68-90dc-2c4d-9870-5cb72b3096c2"],
+Cell[3311, 85, 554, 9, 22, "Print",ExpressionUUID->"623c4aa4-d9a6-9647-9ca3-d597661de056"],
+Cell[3868, 96, 537, 9, 22, "Print",ExpressionUUID->"0730d4de-d562-704a-bca8-da9413ff55e2"],
+Cell[4408, 107, 573, 10, 22, "Print",ExpressionUUID->"132a4894-1ace-3e43-b9a2-140ea7760f9a"],
+Cell[4984, 119, 850, 17, 22, "Print",ExpressionUUID->"f9e4f6d8-2dc0-b74f-b59e-d66b45ffa983"],
+Cell[5837, 138, 597, 10, 22, "Print",ExpressionUUID->"5addfab9-8a74-0748-b29a-0ac36ab836ad"],
+Cell[6437, 150, 574, 10, 22, "Print",ExpressionUUID->"b02e50bd-06ad-aa40-a41c-683a85e0a937"],
+Cell[7014, 162, 731, 12, 39, "Print",ExpressionUUID->"79f270a7-0fad-ee4e-904c-ee0ea4b09cec"],
+Cell[7748, 176, 574, 10, 22, "Print",ExpressionUUID->"0b3e9762-b8dd-6240-8745-85af220e0460"],
+Cell[8325, 188, 576, 10, 22, "Print",ExpressionUUID->"3b302c23-32c1-8840-8924-494b3f534072"],
+Cell[8904, 200, 839, 16, 22, "Print",ExpressionUUID->"4e3f8b89-0e09-174c-ae4a-d06719828432"],
+Cell[9746, 218, 645, 11, 22, "Print",ExpressionUUID->"3f17996d-cc6e-bc47-85b2-a52ffd1c248c"],
+Cell[10394, 231, 574, 10, 22, "Print",ExpressionUUID->"cdc50abc-620f-1c4a-9a2b-cd565baa3d83"],
+Cell[10971, 243, 731, 12, 39, "Print",ExpressionUUID->"2f3b6137-151c-bd41-835d-b7dadc49de91"],
+Cell[11705, 257, 574, 10, 22, "Print",ExpressionUUID->"b4841b6a-cc46-1245-b1f7-96db41715436"],
+Cell[12282, 269, 816, 17, 22, "Print",ExpressionUUID->"89f409f6-c3d8-9d4b-abe6-10224b7c2de4"],
+Cell[13101, 288, 902, 18, 22, "Print",ExpressionUUID->"922214eb-cd28-834e-a480-34574dbce28e"],
+Cell[14006, 308, 1000, 18, 22, "Print",ExpressionUUID->"f365f357-32c0-ae41-ad7f-8dc59edd1c52"],
+Cell[15009, 328, 961, 18, 22, "Print",ExpressionUUID->"12c96ebf-1e86-5d43-adb8-c94a7c554835"],
+Cell[15973, 348, 979, 18, 22, "Print",ExpressionUUID->"7cfdf37b-75d1-864a-8c31-aff313e00976"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17001, 372, 1116, 28, 96, "Input",ExpressionUUID->"85b893d6-4991-a844-b0a5-b120e0999817"],
+Cell[CellGroupData[{
+Cell[18142, 404, 635, 14, 22, "Print",ExpressionUUID->"3da51a31-bbff-e44f-ada3-71c5a72b30cb"],
+Cell[18780, 420, 643, 14, 22, "Print",ExpressionUUID->"d912d813-1fd0-0a49-a722-6f79527666f3"],
+Cell[19426, 436, 789, 18, 22, "Print",ExpressionUUID->"4768b0b7-5a2b-ef43-8ced-579f94b32bc1"],
+Cell[20218, 456, 897, 21, 22, "Print",ExpressionUUID->"5a887c32-631f-e744-940c-e8bbc8ff8f2e"],
+Cell[21118, 479, 870, 20, 22, "Print",ExpressionUUID->"47cbd160-5831-0348-8473-452beae9be29"],
+Cell[21991, 501, 888, 20, 22, "Print",ExpressionUUID->"1eace0bd-598e-3143-8fe6-8d82dd37a8f5"],
+Cell[22882, 523, 719, 16, 22, "Print",ExpressionUUID->"ef41846c-00f1-6646-baca-8704d721d3cd"],
+Cell[23604, 541, 837, 19, 22, "Print",ExpressionUUID->"5372c93f-94cd-bb4e-b64b-927f0fb0ebdf"],
+Cell[24444, 562, 855, 20, 22, "Print",ExpressionUUID->"1f3824bc-e085-a64e-9c5f-ac75c4749477"],
+Cell[25302, 584, 887, 21, 22, "Print",ExpressionUUID->"2f51fac0-43b4-9448-a15e-4e306a994604"],
+Cell[26192, 607, 801, 18, 22, "Print",ExpressionUUID->"04a9b450-9d47-0548-a389-a656e8fe24f0"],
+Cell[26996, 627, 309, 6, 22, "Print",ExpressionUUID->"21b75326-f696-4640-b995-c3d8dbcfdbd2"],
+Cell[27308, 635, 684, 14, 22, "Print",ExpressionUUID->"d9260eea-bd40-f14a-8f76-7c8bc82bcfac"],
+Cell[27995, 651, 316, 6, 22, "Print",ExpressionUUID->"cc47eb1c-e0e9-604f-b30c-80f32609b4e0"],
+Cell[28314, 659, 811, 18, 22, "Print",ExpressionUUID->"6e66f8e3-be8a-414d-a01d-5d8a60880ca4"],
+Cell[29128, 679, 870, 20, 22, "Print",ExpressionUUID->"4d528af9-7bd1-9443-a277-8d0fbdced748"],
+Cell[30001, 701, 809, 18, 22, "Print",ExpressionUUID->"ca629581-0abb-7140-bd94-462d54f96187"],
+Cell[30813, 721, 701, 15, 22, "Print",ExpressionUUID->"02d40cd1-be28-964c-95d9-499eaae0c6e6"],
+Cell[31517, 738, 447, 10, 22, "Print",ExpressionUUID->"229ed846-b0dd-8449-983b-451631d8da9d"],
+Cell[31967, 750, 437, 10, 22, "Print",ExpressionUUID->"ead6fca0-32c5-3f4f-b694-6f7db7397412"],
+Cell[32407, 762, 451, 10, 22, "Print",ExpressionUUID->"e142d6cd-aaf3-7643-8ddc-d684cdc3ace0"],
+Cell[32861, 774, 703, 15, 22, "Print",ExpressionUUID->"ea07e036-5a83-2e41-8276-0133784a662a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33613, 795, 669, 16, 85, "Input",ExpressionUUID->"7a66de43-6689-564c-aa30-753d529b5afb"],
+Cell[34285, 813, 648, 14, 22, "Print",ExpressionUUID->"45dfbcb8-ec93-2a4e-b59d-33e2d71d8c4c"],
+Cell[34936, 829, 400, 6, 32, "Output",ExpressionUUID->"2c5b9561-3478-9148-ba2a-484dfb61d5ad"],
+Cell[35339, 837, 400, 6, 32, "Output",ExpressionUUID->"57ce9e0a-e756-9448-bb12-eb38ee44284d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35776, 848, 546, 13, 66, "Input",ExpressionUUID->"9fe8f223-70ad-8544-bb02-6ee36054a56b"],
+Cell[CellGroupData[{
+Cell[36347, 865, 618, 13, 22, "Print",ExpressionUUID->"ff1b0ae8-afad-6f44-850e-d7ca0db7e4e4"],
+Cell[36968, 880, 822, 18, 22, "Print",ExpressionUUID->"79afbc28-208e-1244-8b9f-04294914ad63"]
+}, Open  ]],
+Cell[37805, 901, 718, 19, 32, "Output",ExpressionUUID->"4f57da57-9ab3-d948-8bb6-048802d3ab98"]
+}, Open  ]],
+Cell[38538, 923, 1494, 41, 61, "Input",ExpressionUUID->"cb5333af-4677-5249-8344-33465e72d6fb"],
+Cell[CellGroupData[{
+Cell[40057, 968, 1768, 41, 161, "Input",ExpressionUUID->"8c3c4e31-b58d-c046-adc7-f9ada4f78d42"],
+Cell[41828, 1011, 40862, 1297, 229, "Output",ExpressionUUID->"fb1b0f75-d7c8-8043-9b43-758069582dfe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82727, 2313, 2127, 57, 85, "Input",ExpressionUUID->"d65f8371-ca46-5f42-b9ac-a1f0e8a46ca0"],
+Cell[84857, 2372, 804, 27, 76, "Output",ExpressionUUID->"9e3ba120-f7b7-d44f-a7fd-4034af63ad96"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[85698, 2404, 983, 24, 61, "Input",ExpressionUUID->"bb1b3390-b9bd-de44-8053-4c23ca731d1e"],
+Cell[86684, 2430, 544, 12, 26, "Message",ExpressionUUID->"5a64eae6-32ae-274f-a21e-33284597fd8d"],
+Cell[87231, 2444, 544, 12, 26, "Message",ExpressionUUID->"099cf84c-7b44-b740-86c8-ffda2464b481"],
+Cell[87778, 2458, 546, 12, 26, "Message",ExpressionUUID->"2159e285-0ae8-214a-81c0-d65f0c391bca"],
+Cell[88327, 2472, 603, 13, 26, "Message",ExpressionUUID->"2afe5550-0f6e-4847-ae28-73ab768c2e34"]
+}, Open  ]],
+Cell[88945, 2488, 150, 2, 28, "Input",ExpressionUUID->"c6f4b4b0-5b3d-f246-bea1-e9badaec6e85"]
+}
+]
+*)
+
